@@ -26,9 +26,19 @@ class HighScoresTest(unittest.TestCase):
     # Test ordered from highest tp lowest
     def test_can_sort_highest_to_lowest(self):
         self.assertEqual([100, 83, 59, 42, 29, 21, 11, 10, 1], sort_scores_highest_to_lowest(self.scores))
+
     # Test top three when there is a tie
+    def test_can_find_top_three_when_tie(self):
+        scores = [10, 10, 35, 2, 80]
+        self.assertEqual([80, 35, 10, 10], personal_top_three(scores))
 
     # Test top three when there are less than three
+    def test_can_find_top_three_when_only_two_scores(self):
+        scores = [10, 28]
+        self.assertEqual([28, 10], personal_top_three(scores))
 
     # Test top three when there is only one
+    def test_can_find_top_three_when_only_one_score(self):
+        scores = [50]
+        self.assertEqual([50], personal_top_three(scores))
     
