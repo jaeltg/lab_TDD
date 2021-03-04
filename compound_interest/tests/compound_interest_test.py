@@ -17,21 +17,20 @@ class CompoundInterestTest(unittest.TestCase):
         self.assertEqual(181.94, compound_interest.calculate_final_investment())
 
     # Should return 149,058.55 given 100000 principal, 5 percent, 8 years
-    def test_returns_compound_interest__scenario_2(self):
+    def test_returns_compound_interest__scenario_3(self):
         compound_interest = CompoundInterest(100000, 5, 8)
         self.assertEqual(149,058.55, compound_interest.calculate_final_investment())
 
     # Should return 0.00 given 0 principal, 10 percent, 1 year
-    def test_returns_compound_interest__scenario_2(self):
+    def test_returns_compound_interest__scenario_4(self):
         compound_interest = CompoundInterest(0, 10, 1)
         self.assertEqual(0.00, compound_interest.calculate_final_investment())
 
     # Should return 100.00 given 100 principal, 0 percent, 10 years
-    def test_returns_compound_interest__scenario_2(self):
+    def test_returns_compound_interest__scenario_5(self):
         compound_interest = CompoundInterest(100, 0, 10)
         self.assertEqual(100.00, compound_interest.calculate_final_investment())
 
-    # Extention tests
 
     # Should return 118,380.16 given 100 principal, 5 percent, 8 years, 1000 per month
 
